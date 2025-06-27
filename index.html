@@ -2,553 +2,350 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Theekshana Thennakoon</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link rel="icon" type="image/x-icon" href="assets/img/testimonial-2.jpg">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 
 <body>
-
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top">
-    <div class="container d-flex align-items-center justify-content-between">
-
-      <h1 class="logo"><a href="index.html">Theekshana Thennakoon</a></h1>
-
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
-          <li><a class="nav-link scrollto " href="#work">Work</a></li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-        </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
+  <nav id="desktop-nav">
+    <div class="logo">Theekshana Thennakoon</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-  <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg)">
-    <div class="overlay-itro"></div>
-    <div class="hero-content display-table">
-      <div class="table-cell">
-        <div class="container">
-          <!--<p class="display-6 color-d">Hello, world!</p>-->
-          <h1 class="hero-title mb-4">I am Theekshana Thennakoon</h1>
-          <p class="hero-subtitle"><span class="typed"
-              data-typed-items="Mobile App Developer, Web Developer, Web Designer , Full Stack Developer"></span>
+  </nav>
+  <nav id="hamburger-nav">
+    <div class="logo">Theekshana</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic.png" style="border-radius: 200px;border:15px solid #4649B4;"
+        alt="John Doe profile picture" />
+    </div>
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Theekshana Thennakoon</h1>
+      <p class="section__text__p2">Web Developer</p>
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/resume-example.pdf')">
+          Download CV
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+      <div id="socials-container">
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+          onclick="location.href='https://www.linkedin.com/in/theekshana-thennakoon08/'" />
+        <img src="./assets/github.png" alt="My Github profile" class="icon"
+          onclick="location.href='https://github.com/theekshana-thennakoon'" />
+        <img src="./assets/email.png" alt="My Email" class="icon"
+          onclick="location.href='mailto:teekshanathennakoon79@gmail.com'" />
+      </div>
+    </div>
+  </section>
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/about-pic.png" alt="Profile picture" class="about-pic" />
+      </div>
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p>8+ years <br />Web Development</p>
+          </div>
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>Bachelor in ICT<br />(Hons)</p>
+          </div>
+        </div>
+        <div class="text-container">
+          <p style="text-align: justify;">
+            I am studying at Rajarata University of Sri Lanka, where I honed my skills and gained valuable knowledge in
+            web and mobile application development. My education and continuous learning demonstrate my passion and
+            commitment to the field.
           </p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+          <br>
+          <p style="text-align: justify;">
+            I am a skilled and experienced web and mobile application developer with over five years of experience in
+            the
+            field. I have worked on numerous web development projects and has significant experience in web application
+            development and mobile application development. my expertise in web development and mobile application
+            development is a testament to my dedication to the field and commitment to delivering excellent results
+            every time.
+          </p>
         </div>
       </div>
     </div>
-  </div><!-- End Hero Section -->
-
-  <main id="main">
-
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="box-shadow-full">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="row">
-                    <div class="col-sm-6 col-md-5">
-                      <div class="about-img">
-                        <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                      </div>
-                    </div>
-                    <div class="col-sm-6 col-md-7">
-                      <div class="about-info">
-                        <p><span class="title-s">Name: </span> <span>Theekshana Thennakoon</span></p>
-                        <p><span class="title-s">Profile: </span> <span>full stack developer</span></p>
-                        <p><span class="title-s">Email: </span> <span>theekshanathennakoon79@gmail.com</span></p>
-                        <p><span class="title-s">Phone: </span> <span>+9478 965 1168</span></p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="skill-mf">
-                    <p class="title-s">Skill</p>
-                    <span>HTML</span> <span class="pull-right">100%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>CSS3</span> <span class="pull-right">95%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>PHP</span> <span class="pull-right">95%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>JAVASCRIPT</span> <span class="pull-right">90%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>C#</span> <span class="pull-right">95%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <span>ANDROID STUDIO</span> <span class="pull-right">80%</span>
-                    <div class="progress">
-                      <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="90"
-                        aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="about-me pt-4 pt-md-0">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        About me
-                      </h5>
-                    </div>
-                    <p style="text-align:justify">
-                      <span style="text-align:justify">
-                        I am studying at Rajarata University of Sri Lanka,
-                        where I honed my skills and gained valuable knowledge in web and mobile application development.
-                        My education and continuous learning demonstrate my passion and commitment to the field.
-                      </span>
-                    </p>
-                    <p style="text-align:justify">
-                      <span>
-                        I am a skilled and experienced web and mobile application developer with over five years of
-                        experience in the field.
-                        I have worked on numerous web development projects and has significant experience in web
-                        application development and mobile application development.
-                        my expertise in web development and mobile application development is a testament to my
-                        dedication
-                        to the field and commitment to delivering excellent results every time.
-                      </span>
-                    </p>
-                    <p style="text-align:justify">
-                      <span>
-                        In addition to my technical skills, I am a great team player with excellent communication
-                        skills.
-                        I understands the importance of collaboration and has worked effectively with diverse teams to
-                        deliver projects on time and within budget.
-                      </span>
-                    </p>
-                  </div>
-                </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+  <br>
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>HTML</h3>
+                <p>Experienced</p>
               </div>
-            </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>CSS</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>bootstrap</h3>
+                <p>Intermediate</p>
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>PHP</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>MySQL</h3>
+                <p>Experienced</p>
+              </div>
+            </article>
+            <article>
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <div>
+                <h3>JavaScript</h3>
+                <p>Basic</p>
+              </div>
+            </article>
           </div>
         </div>
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services-mf pt-5 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Services
-              </h3>
-              <div class="line-mf"></div>
-            </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Vehicle management system</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/vehicle_data_management_system/'">
+              Github
+            </button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-window-fullscreen"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Development</h2>
-                <p class="s-description text-center">
-                </p>
-              </div>
-            </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Web base oil<br>lamp</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Webbase_oil_lamp'">
+              Github
+            </button>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-laptop"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Web Design</h2>
-                <p class="s-description text-center">
-                </p>
-              </div>
-            </div>
+        </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Online parking system</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Online-vehicle-parking-system'">
+              Github
+            </button>
           </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-phone"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Mobile App Development</h2>
-                <p class="s-description text-center">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-pc-display"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Software Development</h2>
-                <p class="s-description text-center">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-pc"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">System Designing</h2>
-                <p class="s-description text-center">
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="service-box">
-              <div class="service-ico">
-                <span class="ico-circle"><i class="bi bi-calendar4-week"></i></span>
-              </div>
-              <div class="service-content">
-                <h2 class="s-title">Marketing Services</h2>
-                <p class="s-description text-center">
-                </p>
-              </div>
-            </div>
+        </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 4" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Online Election system</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Online_Election_system'">
+              Github
+            </button>
           </div>
         </div>
       </div>
-    </section><!-- End Services Section -->
 
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-check"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="1"
-                  class="counter purecounter"></p>
-                <span class="counter-text">WORKS COMPLETED</span>
-              </div>
-            </div>
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">CBL License Reminder</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/CBL-License-Reminder'">
+              Github
+            </button>
           </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="7" data-purecounter-duration="1"
-                  class="counter purecounter"></p>
-                <span class="counter-text">YEARS OF EXPERIENCE</span>
-              </div>
-            </div>
+        </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Spotify Clone</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Spotify-Clone'">
+              Github
+            </button>
           </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="250" data-purecounter-duration="1"
-                  class="counter purecounter"></p>
-                <span class="counter-text">TOTAL CLIENTS</span>
-              </div>
-            </div>
+        </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">KPI Managment System</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/KPI-Managment-System'">
+              Github
+            </button>
           </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-award"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="4" data-purecounter-duration="1"
-                  class="counter purecounter"></p>
-                <span class="counter-text">AWARD WON</span>
-              </div>
-            </div>
+        </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 4" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Agriculture System</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Agri-System'">
+              Github
+            </button>
           </div>
         </div>
       </div>
-    </div><!-- End Counter Section -->
 
-    <!-- ======= Portfolio Section ======= -->
-    <section id="work" class="portfolio-mf sect-pt4 route">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="title-box text-center">
-              <h3 class="title-a">
-                Portfolio.
-              </h3>
-              <div class="line-mf"></div>
-            </div>
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Pharmacy System</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Pharmacy-System'">
+              Github
+            </button>
           </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-1.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Grohive Social Media Platform</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Hotel Managment System</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Hotel-Managment-System'">
+              Github
+            </button>
           </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-2.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">CBL Hazard Reporting App</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-3.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">CBL License Reminder System</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-4.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Brandix Hazard Reporting App</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-5.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Brandix KPI Managment System</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a href="assets/img/work-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                <div class="work-img">
-                  <img src="assets/img/work-6.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Pahasuwa Point of Sales System</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="paralax-mf footer-paralax bg-image sect-mt4 route"
-      style="background-image: url(assets/img/overlay-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-mf">
-              <div id="contact" class="box-shadow-full">
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="title-box-2">
-                      <h5 class="title-left">
-                        Send Message Us
-                      </h5>
-                    </div>
-                    <div>
-                      <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                        <div class="row">
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
-                                required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="email" class="form-control" name="email" id="email" placeholder="Your Email"
-                                required>
-                            </div>
-                          </div>
-                          <div class="col-md-12 mb-3">
-                            <div class="form-group">
-                              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject"
-                                required>
-                            </div>
-                          </div>
-                          <div class="col-md-12">
-                            <div class="form-group">
-                              <textarea class="form-control" name="message" rows="5" placeholder="Message"
-                                required></textarea>
-                            </div>
-                          </div>
-                          <div class="col-md-12 text-center my-3">
-                            <div class="loading">Loading</div>
-                            <div class="error-message"></div>
-                            <div class="sent-message">Your message has been sent. Thank you!</div>
-                          </div>
-                          <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="title-box-2 pt-4 pt-md-0">
-                      <h5 class="title-left">
-                        Get in Touch
-                      </h5>
-                    </div>
-                    <div class="more-info">
-                      <ul class="list-ico">
-                        <li><span class="bi bi-geo-alt"></span> Negombo Road , Narammala</li>
-                        <li><span class="bi bi-phone"></span> <a href="tel:+94789651168">+9478 965 1168</a> | <a
-                            href="tel:+94705040775">+94 70 504 0775</a> </li>
-                        <li><span class="bi bi-envelope"></span> <a
-                            href="mailto:theekshanathennakoon79@gmail.com">theekshanathennakoon79@gmail.com</a></li>
-                      </ul>
-                    </div>
-                    <div class="socials">
-                      <ul>
-                        <li><a href="https://web.facebook.com/theekshanathennakoon08"><span class="ico-circle"><i
-                                class="bi bi-facebook"></i></span></a></li>
-                        <li><a href="https://www.instagram.com/thennakoontheekshana/"><span class="ico-circle"><i
-                                class="bi bi-instagram"></i></span></a></li>
-                        <li><a href="https://twitter.com/TheekshanaThen2"><span class="ico-circle"><i
-                                class="bi bi-twitter"></i></span></a></li>
-                        <li><a href="https://www.linkedin.com/in/theekshana-thennakoon-2000nov08/"><span
-                              class="ico-circle"><i class="bi bi-linkedin"></i></span></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+        <div class="details-container color-container">
+          <!-- <div class="article-container">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+          </div> -->
+          <h2 class="experience-sub-title project-title">Word Game</h2>
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn"
+              onclick="location.href='https://github.com/theekshana-thennakoon/Word-Game'">
+              Github
+            </button>
           </div>
         </div>
       </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:theekshanathennakoon79@gmail.com">E-Mail</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p><a href="https://www.linkedin.com/in/theekshana-thennakoon08/">LinkedIn</a></p>
+      </div>
+      <div class="contact-info-container">
+        <img src="./assets/github.png" alt="Github icon" class="icon contact-icon" />
+        <p><a href="https://github.com/theekshana-thennakoon">Github</a></p>
+      </div>
+    </div>
+  </section>
   <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="copyright-box">
-            <div class="credits">
-              Designed by <a href="https:theekshana-thennakoon.github.io">Theekshana Thennakoon</a>
-            </div>
-          </div>
-        </div>
+    <nav>
+      <div class="nav-links-container">
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
       </div>
-    </div>
-  </footer><!-- End  Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/typed.js/typed.umd.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
-
+    </nav>
+    <p>Copyright &#169; 2025 Theekshana Thennakoon. All Rights Reserved.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 
 </html>

@@ -106,9 +106,9 @@ document.addEventListener('DOMContentLoaded', function () {
       console.error('Error fetching GitHub repositories:', error);
       projectsContainer.innerHTML = `
         <div class="error-message">
+        <p class="error-detail" style = 'color:red;'> Network Connection Error</p>
           Could not load projects from GitHub. Please visit my 
           <a href="https://github.com/${username}" target="_blank">GitHub profile</a> directly.
-          ${error.message ? `<p class="error-detail">Error: ${error.message}</p>` : ''}
         </div>
       `;
     });

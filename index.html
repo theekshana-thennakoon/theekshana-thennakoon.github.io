@@ -8,7 +8,8 @@
   <title>Theekshana Thennakoon</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="mediaqueries.css" />
-  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
@@ -39,6 +40,81 @@
       </div>
     </div>
   </nav>
+  <button id="theme-toggle" class="btn btn-color-2"
+    style="border:0;position: absolute; top:30px; right: 20px; z-index: 1000;">
+    <i class="fa fa-moon-o" aria-hidden="true"></i>
+  </button>
+
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const darkClass = 'dark-mode';
+
+    function setTheme(isDark) {
+      if (isDark) {
+        document.body.classList.add(darkClass);
+        toggleBtn.innerHTML = '<i class="fa fa-sun-o" aria-hidden="true"></i>';
+        localStorage.setItem('theme', 'dark');
+      } else {
+        document.body.classList.remove(darkClass);
+        toggleBtn.innerHTML = '<i class="fa fa-moon-o" aria-hidden="true"></i>';
+        localStorage.setItem('theme', 'light');
+      }
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      setTheme(!document.body.classList.contains(darkClass));
+    });
+
+    // On load, set theme from localStorage
+    setTheme(localStorage.getItem('theme') === 'dark');
+  </script>
+  <style>
+    .dark-mode {
+      background: #181824 !important;
+      color: #f1f1f1 !important;
+    }
+
+    .btn-color-2:hover {
+      background: transparent;
+    }
+
+    .dark-mode .details-container,
+    .dark-mode .about-containers,
+    .dark-mode .section-container,
+    .dark-mode .contact-info-upper-container,
+    .dark-mode .nav-links-container,
+    .dark-mode .btn,
+    .dark-mode .experience-details-container,
+    .dark-mode .text-container p {
+      color: #ccc !important;
+    }
+
+    .dark-mode a {
+      color: #b3b3ff !important;
+    }
+
+    .dark-mode .btn-color-1 {
+      color: #fff !important;
+    }
+
+    .dark-mode .btn-color-2 {
+      color: #fff !important;
+    }
+
+    .dark-mode .dark-h3 {
+      color: #181824;
+    }
+
+    .dark-mode .social {
+      background: #fff;
+      border-radius: 100%;
+      padding: 0.5%;
+    }
+
+    .dark-mode .error-message {
+      background: #fff;
+    }
+  </style>
   <section id="profile">
     <div class="section__pic-container">
       <img src="./assets/profile-pic.png" style="border-radius: 200px;border:15px solid #4649B4;"
@@ -57,11 +133,11 @@
         </button>
       </div>
       <div id="socials-container">
-        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+        <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon social"
           onclick="location.href='https://www.linkedin.com/in/theekshana-thennakoon08/'" />
-        <img src="./assets/github.png" alt="My Github profile" class="icon"
+        <img src="./assets/github.png" alt="My Github profile" class="icon social"
           onclick="location.href='https://github.com/theekshana-thennakoon'" />
-        <img src="./assets/email.png" alt="My Email" class="icon"
+        <img src="./assets/email.png" alt="My Email" class="icon social"
           onclick="location.href='mailto:teekshanathennakoon79@gmail.com'" />
       </div>
     </div>
@@ -77,12 +153,12 @@
         <div class="about-containers">
           <div class="details-container">
             <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
+            <h3 class="dark-h3">Experience</h3>
             <p>8+ years <br />Web Development</p>
           </div>
           <div class="details-container">
             <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
+            <h3 class="dark-h3">Education</h3>
             <p>Bachelor in ICT<br />(Hons)</p>
           </div>
         </div>
@@ -118,21 +194,21 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>HTML</h3>
+                <h3 class="dark-h3">HTML</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>CSS</h3>
+                <h3 class="dark-h3">CSS</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>bootstrap</h3>
+                <h3 class="dark-h3">bootstrap</h3>
                 <p>Intermediate</p>
               </div>
             </article>
@@ -144,21 +220,21 @@
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>PHP</h3>
+                <h3 class="dark-h3">PHP</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>MySQL</h3>
+                <h3 class="dark-h3">MySQL</h3>
                 <p>Experienced</p>
               </div>
             </article>
             <article>
               <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
               <div>
-                <h3>JavaScript</h3>
+                <h3 class="dark-h3">JavaScript</h3>
                 <p>Basic</p>
               </div>
             </article>
@@ -172,7 +248,7 @@
     <p class="section__text__p1">Browse My Recent</p>
     <h1 class="title">Projects</h1>
     <div class="experience-details-container" id="projects-container">
-      <div class="loading-message">Loading projects from GitHub...</div>
+      <div class="loading-message">Loading my projects</div>
     </div>
     <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'" />
   </section>
@@ -181,15 +257,15 @@
     <h1 class="title">Contact Me</h1>
     <div class="contact-info-upper-container">
       <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon social" />
         <p><a href="mailto:theekshanathennakoon79@gmail.com">E-Mail</a></p>
       </div>
       <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon social" />
         <p><a href="https://www.linkedin.com/in/theekshana-thennakoon08/">LinkedIn</a></p>
       </div>
       <div class="contact-info-container">
-        <img src="./assets/github.png" alt="Github icon" class="icon contact-icon" />
+        <img src="./assets/github.png" alt="Github icon" class="icon contact-icon social" />
         <p><a href="https://github.com/theekshana-thennakoon">Github</a></p>
       </div>
     </div>

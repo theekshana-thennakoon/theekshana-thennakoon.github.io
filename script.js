@@ -76,11 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
               <span class="project-updated">${new Date(repo.updated_at).toLocaleDateString()}</span>
             </div>
             <div class="btn-container">
-              <button class="btn btn-color-2 project-btn" onclick="window.open('${repo.html_url}', '_blank')">
+              <button class="btn btn-color-2 project-btn link-btn" onclick="window.open('${repo.html_url}', '_blank')">
                 View on GitHub
               </button>
               ${repo.homepage ? `
-              <button class="btn btn-color-1 project-btn" onclick="window.open('${repo.homepage}', '_blank')">
+              <button class="btn btn-color-1 project-btn link-btn" onclick="window.open('${repo.homepage}', '_blank')">
                 Live Demo
               </button>` : ''}
             </div>
